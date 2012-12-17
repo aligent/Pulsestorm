@@ -1,0 +1,24 @@
+# PulseStorm repo definition
+README					README.pulsestorm
+app/code/community/Pulsestorm/Launcher	app/code/community/Pulsestorm/Launcher
+app/code/community/Pulsestorm/Simplepage	app/code/community/Pulsestorm/Simplepage
+app/code/local/Alanstormdotcom/Developermanual	app/code/local/Alanstormdotcom/Developermanual
+app/code/local/Alanstormdotcom/Layoutviewer	app/code/local/Alanstormdotcom/Layoutviewer
+app/code/local/Alanstormdotcom/Systemsearch	app/code/local/Alanstormdotcom/Systemsearch
+app/code/local/Alanstormdotcom/Unremove	app/code/local/Alanstormdotcom/Unremove
+app/code/local/Alanstormdotcom/Xuacompatible	app/code/local/Alanstormdotcom/Xuacompatible
+app/code/local/Pulsestorm/Javascriptevent	app/code/local/Pulsestorm/Javascriptevent
+app/code/local/Pulsestorm/Modulelist	app/code/local/Pulsestorm/Modulelist
+app/design/adminhtml/default/default/images/alanstormdotcom	app/design/adminhtml/default/default/images/alanstormdotcom
+app/design/adminhtml/default/default/template/pulsestorm_javascriptevent	app/design/adminhtml/default/default/template/pulsestorm_javascriptevent
+app/design/adminhtml/default/default/template/pulsestorm_launcher	app/design/adminhtml/default/default/template/pulsestorm_launcher
+app/design/frontend/default/default/template/pulsestorm_simplepage	app/design/frontend/default/default/template/pulsestorm_simplepage
+
+# Copy each module activation xml file.  Alan ships each module disabled so you can enable the ones you actually use.
+@shell \
+pushd $MODULE/app/etc/modules; \
+for f in *.xml; \
+do \
+  [ -f $PROJECT/app/etc/modules/$f ] || cp $MODULE/app/etc/modules/$f $PROJECT/app/etc/modules; \
+done; \
+popd
