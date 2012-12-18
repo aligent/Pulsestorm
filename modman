@@ -1,18 +1,55 @@
 # PulseStorm repo definition
-README					README.pulsestorm
-app/code/community/Pulsestorm/Launcher	app/code/community/Pulsestorm/Launcher
-app/code/community/Pulsestorm/Simplepage	app/code/community/Pulsestorm/Simplepage
-app/code/local/Alanstormdotcom/Developermanual	app/code/local/Alanstormdotcom/Developermanual
-app/code/local/Alanstormdotcom/Layoutviewer	app/code/local/Alanstormdotcom/Layoutviewer
-app/code/local/Alanstormdotcom/Systemsearch	app/code/local/Alanstormdotcom/Systemsearch
-app/code/local/Alanstormdotcom/Unremove	app/code/local/Alanstormdotcom/Unremove
-app/code/local/Alanstormdotcom/Xuacompatible	app/code/local/Alanstormdotcom/Xuacompatible
-app/code/local/Pulsestorm/Javascriptevent	app/code/local/Pulsestorm/Javascriptevent
-app/code/local/Pulsestorm/Modulelist	app/code/local/Pulsestorm/Modulelist
-app/design/adminhtml/default/default/images/alanstormdotcom	app/design/adminhtml/default/default/images/alanstormdotcom
-app/design/adminhtml/default/default/template/pulsestorm_javascriptevent	app/design/adminhtml/default/default/template/pulsestorm_javascriptevent
-app/design/adminhtml/default/default/template/pulsestorm_launcher	app/design/adminhtml/default/default/template/pulsestorm_launcher
-app/design/frontend/default/default/template/pulsestorm_simplepage	app/design/frontend/default/default/template/pulsestorm_simplepage
+app/code/community/Pulsestorm/Chaos app/code/community/Pulsestorm/Chaos
+app/code/community/Pulsestorm/Javascriptevent app/code/community/Pulsestorm/Javascriptevent
+app/code/community/Pulsestorm/Launcher app/code/community/Pulsestorm/Launcher
+app/code/community/Pulsestorm/Modulelist app/code/community/Pulsestorm/Modulelist
+app/code/community/Pulsestorm/Simplepage app/code/community/Pulsestorm/Simplepage
+app/code/local/Alanstormdotcom/Developermanual app/code/local/Alanstormdotcom/Developermanual
+app/code/local/Alanstormdotcom/Layoutviewer app/code/local/Alanstormdotcom/Layoutviewer
+app/code/local/Alanstormdotcom/Systemsearch app/code/local/Alanstormdotcom/Systemsearch
+app/code/local/Alanstormdotcom/Unremove app/code/local/Alanstormdotcom/Unremove
+app/code/local/Alanstormdotcom/Xuacompatible app/code/local/Alanstormdotcom/Xuacompatible
+app/design/adminhtml/default/default/images/alanstormdotcom app/design/adminhtml/default/default/images/alanstormdotcom
+app/design/adminhtml/default/default/template/pulsestorm_javascriptevent app/design/adminhtml/default/default/template/pulsestorm_javascriptevent
+app/design/adminhtml/default/default/template/pulsestorm_launcher app/design/adminhtml/default/default/template/pulsestorm_launcher
+app/design/frontend/default/default/template/pulsestorm_simplepage app/design/frontend/default/default/template/pulsestorm_simplepage
+skin/adminhtml/default/default/images/alanstormdotcom skin/adminhtml/default/default/images/alanstormdotcom
+skin/adminhtml/default/default/pulsestorm_launcher skin/adminhtml/default/default/pulsestorm_launcher
+var/build/.forbuild var/build/.forbuild
+vendor/magento/downloader/lib/Mage/Archive/Abstract.php vendor/magento/downloader/lib/Mage/Archive/Abstract.php
+vendor/magento/downloader/lib/Mage/Archive/Helper/File.php vendor/magento/downloader/lib/Mage/Archive/Helper/File.php
+vendor/magento/downloader/lib/Mage/Archive/Interface.php vendor/magento/downloader/lib/Mage/Archive/Interface.php
+vendor/magento/downloader/lib/Mage/Archive/Tar.php vendor/magento/downloader/lib/Mage/Archive/Tar.php
+vendor/magento/downloader/lib/Mage/Exception.php vendor/magento/downloader/lib/Mage/Exception.php
+build_chaos.bash build_chaos.bash
+build_developer_manual.bash build_developer_manual.bash
+build_launcher.bash build_launcher.bash
+build_layout_unremove.bash build_layout_unremove.bash
+build_layout_viewer.bash build_layout_viewer.bash
+build_module_list.bash build_module_list.bash
+build_system_config_search.bash build_system_config_search.bash
+build_xuacompat.bash build_xuacompat.bash
+magento-create-setup.php magento-create-setup.php
+magento-increment-version.php magento-increment-version.php
+magento-tar-to-connect.chaos.php magento-tar-to-connect.chaos.php
+magento-tar-to-connect.developermanual.php magento-tar-to-connect.developermanual.php
+magento-tar-to-connect.launcher.php magento-tar-to-connect.launcher.php
+magento-tar-to-connect.modulelist.php magento-tar-to-connect.modulelist.php
+magento-tar-to-connect.php magento-tar-to-connect.php
+README.markdown README.markdown
+
+
+# app/etc/modules/Alanstormdotcom_Developermanual.xml app/etc/modules/Alanstormdotcom_Developermanual.xml
+# app/etc/modules/Alanstormdotcom_Layoutviewer.xml app/etc/modules/Alanstormdotcom_Layoutviewer.xml
+# app/etc/modules/Alanstormdotcom_Systemsearch.xml app/etc/modules/Alanstormdotcom_Systemsearch.xml
+# app/etc/modules/Alanstormdotcom_Unremove.xml app/etc/modules/Alanstormdotcom_Unremove.xml
+# app/etc/modules/Alanstormdotcom_Xuacompatible.xml app/etc/modules/Alanstormdotcom_Xuacompatible.xml
+# app/etc/modules/Pulsestorm_Chaos.xml app/etc/modules/Pulsestorm_Chaos.xml
+# app/etc/modules/Pulsestorm_Javascriptevent.xml app/etc/modules/Pulsestorm_Javascriptevent.xml
+# app/etc/modules/Pulsestorm_Launcher.xml app/etc/modules/Pulsestorm_Launcher.xml
+# app/etc/modules/Pulsestorm_Modulelist.xml app/etc/modules/Pulsestorm_Modulelist.xml
+# app/etc/modules/Pulsestorm_Simplepage.xml app/etc/modules/Pulsestorm_Simplepage.xml
+
 
 # Copy each module activation xml file.  Alan ships each module disabled so you can enable the ones you actually use.
 @shell \
