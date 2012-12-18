@@ -11,12 +11,26 @@
 * 
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-class Pulsestorm_Modulelist_CssController extends Mage_Adminhtml_Controller_Action
+class Pulsestorm_Modulelist_Block_Top extends Pulsestorm_Modulelist_Block_Template
 {
-    public function mainAction()
-    {
-    	header('Content-Type: text/css');
-    	include(realpath(dirname(__FILE__)) . '/../css/main.css');
-    	exit;
-    }
+	public function createTableBlock($list)
+	{
+		return $this->getLayout()->createBlock('pulsestorm_modulelist/moduletable')
+		->setList($list);
+	}
+	
+	public function getLocalWarnings()
+	{
+	    $config = Mage::getConfig();
+	    $messages = array();
+	    
+        $global = $config->getNode('global');
+        
+	    if($global->is('disable_local_modules',true))
+	    {
+            $message = $this->__('An unknown module has set the <code>global/disable_local_modules</code> node to true. This will disable all local modules.');	    
+            $messages[] = $message;
+	    }
+	    return $messages;
+	}
 }

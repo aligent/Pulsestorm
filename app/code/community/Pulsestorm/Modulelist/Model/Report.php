@@ -38,6 +38,24 @@ class Pulsestorm_Modulelist_Model_Report extends Varien_Object
 			$exists = file_exists($o->getPath() . '/etc/config.xml');
 			$exists = $exists ? 'yes' : 'no';
 			$o->setConfigExists($exists);			
+			$o->setModuleVersion('?');
+			if($exists == 'yes')
+			{
+			    $xml = simplexml_load_file($o->getPath() . '/etc/config.xml');
+			    $modules = $xml->modules;
+			    if(!$modules){ continue; }
+			    
+			    $name = $modules->{$item->getName()};
+			    if(!$name){ continue; }
+			    
+			    $version = $name->version;
+			    if(!$version) { 
+			        $version = '?';
+			    }
+			    
+			    $version = (string) $version;
+			    $o->setModuleVersion($version);
+			}
 			
 			
 			if(!array_key_exists($o->getCodePool(), $this->_lists))
